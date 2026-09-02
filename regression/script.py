@@ -38,7 +38,6 @@ def local_regression_prediction(y, x, k, x0):
     se : list
         vector of standard deviations of the expected value of each predicted value.
     """
-    
     # Create plot to illustrate datapoints and selected local points
     plt.plot(x, y, ".", label = "Non-selected datapoints")
     plt.title("Visualization of datapoints")
@@ -55,7 +54,7 @@ def local_regression_prediction(y, x, k, x0):
         local_x, local_y = select_neighboring_points(y, x, k, x0[i])
         
         # Mark selected points in plot
-        plt.plot(local_x, local_y, "o", label = f"Selected points near x0_{i}")
+        plt.plot(local_x, local_y, "o", label = f"Selected points near x = {x0[i]}%")
        
         # Use optimization to estimate the local intercept and slope (b0 and b1)
         w = weight(local_x, x0[i])

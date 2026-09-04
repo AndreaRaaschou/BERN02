@@ -21,11 +21,14 @@ def simulate_bird_counts(df):
     # Estimate intercept and slope using scipy minimize and likelihood function for poisson GLM
     b0, b1 = minimize(lambda beta: -log_likelihood(beta, x, y), x0=[0, 0]).x
     
+    print(f"b0: {b0}")
+    print(f"b1: {b1}")
+    
     # Link function to extract expected responsevalues, used to simulate bird counts
     lambdas = np.exp(b0 + b1*x)
     
     # Plot line for extimated GLM
-    plt.plot(df["yr"], np.exp(b0 + b1*x), label = "Fitted GLM")
+    plt.plot(df["yr"], np.exp(b0 + b1*x), label = f"Fitted GLM e^({b0:.4f} + {b1:.4f}*x)")
     
     # Generate poisson distributed bird counts 3 times
     result = []

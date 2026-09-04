@@ -59,7 +59,7 @@ def local_regression_prediction(y, x, k, x0):
         # Use optimization to estimate the local intercept and slope (b0 and b1)
         w = weight(local_x, x0[i])
         b0, b1 = minimize(weighted_rss, [0,0], args=(local_x, local_y, w)).x
-        
+               
         # Plug the estimated beta values into the model y = b0 + x*b1 to get predictions
         pred.append(b0 + b1*x0[i])
         

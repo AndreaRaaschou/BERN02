@@ -10,7 +10,7 @@ from scipy.optimize import minimize
 
 # Read data, put in pandas dataframe
 df = pd.read_csv("/Users/andrearaaschou/courses/BERN02/exercises/glm/data/bird_count.csv")
-df = df.sort_values("yr")                               # sort data by year (in chronological order)
+df = df.sort_values("yr").reset_index(drop=True)        # sort data by year (in chronological order) + reset index
 df["yr_mean_centered"] = df["yr"] - df["yr"].mean()     # create mean-centered year column
 
 

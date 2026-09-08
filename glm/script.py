@@ -2,6 +2,8 @@
 """
 Created on Thu Sep  3 11:17:05 2026
 @author: andrearaaschou
+
+Exercise on GLM's for the course BERN02
 """
 import numpy as np
 import  matplotlib.pyplot as plt
@@ -20,9 +22,6 @@ def simulate_bird_counts(df):
     
     # Estimate intercept and slope using scipy minimize and likelihood function for poisson GLM
     b0, b1 = minimize(lambda beta: -log_likelihood(beta, x, y), x0=[0, 0]).x
-    
-    print(f"b0: {b0}")
-    print(f"b1: {b1}")
     
     # Link function to extract expected responsevalues, used to simulate bird counts
     lambdas = np.exp(b0 + b1*x)

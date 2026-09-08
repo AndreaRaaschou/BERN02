@@ -22,7 +22,7 @@ Packages used in this project are the following:
  - pooch
  - scipy
 
-Pinned versions can be found in the .toml file.
+Minimum constraints can be found in the pyproject.toml file. The current constraints are minimum-version constraints rather than exact pinning. This allows unnecesarily restricting the environment to one exact package version but runs the risk of the program breaking or behaving unexpecteadly using future versions of packages. If this happens, the exact versions of the dependencies used to create the current environment can be recreated from the uv.lock file.
 
 The project uses uv for environment management.
 

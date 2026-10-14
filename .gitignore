@@ -1,0 +1,6 @@
+
+# Project data files
+final_project/data/
+
+# Trained neural network models
+final_project/*.keras

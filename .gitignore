@@ -1,3 +1,18 @@
+# Local presentation files
+final_project/presentation/
+
+# Extra notebook not intended for GitHub
+final_project/extra_code.ipynb
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# macOS files
+.DS_Store
 
 # Project data files
 final_project/data/

@@ -16,6 +16,9 @@ Data files are stored in the `data/` directory and are not included in this repo
     - `Geographical_CV.ipynb` — Alternative geographical validation approach.
     - `remove_outliers.ipynb` — Investigation of outlier removal.
 - `plots/` — Figures generated during the project.
+- `LICENSE.txt` - License for reusing the code
+- `README.md` - Information about the project
+- `requirements.txt` - Lists the main dependencies needed to run the analysis.
 
 
 ## Method
@@ -30,13 +33,13 @@ The reason for choosing a neural network to solve this problem was mainly for le
 ## Usage
 Place the required data files in `data/` and run `main.ipynb` from top to bottom.
 
-### Requirements
-Python with NumPy, pandas, xarray, Matplotlib, Cartopy, TensorFlow, and scikit-learn.
+## Requirements
+This project was developed using Python 3.12. The `requirements.txt` file lists the main dependencies needed to run the analysis. 
 
 ## FAIR principles
  - **F**indable: The project is public and can be found on GitHub. Data from the NCSCD can be found using the link provided below. Data from the BERN01 course cannot be found publically.
  - **A**ccessible: The code and all the figures are accessible to pull from the public GitHub repository. The data is less accessible (see point above)
  - **I**nteroperable: I have done my best to use formal, accessible and broadly used libraries and vocabulary to make the code easy to understand and for it to work with other applications. References to the NCSCD data is clear, but a clear limitation is the missing data from BERN01. 
- - **R**eusable: This project can not be recreated fully since some of the data is missing. I am currently missing a .venv file which is a limitation for reuse and reproduce the code on another computer. I have used a license which allows for reusing the code. 
+ - **R**eusable: This project can not be recreated fully since some of the data is missing. The requirements can be found in a seperate textfile. I have only listed minimum versions, allowing for newer versions than what was used in this project. This should theoretically be safe but could create problems if someone tries to recreate this project in a few years. I have used a license which allows for reusing the code (GNU).«
 
 
